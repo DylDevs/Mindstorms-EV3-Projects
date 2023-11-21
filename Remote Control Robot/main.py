@@ -1,3 +1,7 @@
+# Project Description
+# This project uses the Infared Sensor on the robot to recive inputs from the remote
+# Using those inputs it moves the robots wheels in the appropriate direction
+
 #!/usr/bin/env pybricks-micropython
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
@@ -10,15 +14,10 @@ from pybricks.media.ev3dev import SoundFile, ImageFile
 # Initialize the EV3 Brick.
 ev3 = EV3Brick()
 
-# Initialize Motors, Sensors, and DriveBase
+# Initialize Motors and Sensors
 right_motor = Motor(Port.A)
 left_motor = Motor(Port.D)
-blade_motor = Motor(Port.C)
 infrared_sensor = InfraredSensor(Port.S2)
-color_sensor = ColorSensor(Port.S1)
-touch_sensor = TouchSensor(Port.S3)
-Robot = DriveBase(left_motor, right_motor, 275.2, 165)
-Robot.settings(straight_speed=1000)
 
 # Play a sound to tell us when we are ready to start moving
 ev3.speaker.beep()
