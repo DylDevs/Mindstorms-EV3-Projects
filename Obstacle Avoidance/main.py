@@ -1,3 +1,9 @@
+# Project Description
+# This project uses the EV3 Infrared Sensor to detect objects that are in front of it
+# If an object is detected, it will bac up and turn left.
+# This cycle will continue until the program is stopped
+
+
 #!/usr/bin/env pybricks-micropython
 from pybricks.hubs import EV3Brick
 from pybricks.ev3devices import (Motor, TouchSensor, ColorSensor,
